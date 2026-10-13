@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+rasterio
+geopandas
+spectral
+tqdm
+jupyter
+notebook
