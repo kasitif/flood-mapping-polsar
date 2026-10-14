@@ -129,10 +129,13 @@ small built-in reader, so no `spectral`/GDAL dependency is required.
 
 ## Related Work
 
-This work builds on and extends polarimetric SAR change detection theory. See the paper for detailed references and related work on:
-- Polarimetric SAR signal modeling and optimization
-- Flood detection and monitoring with SAR
-- Wetland inundation dynamics
+This study builds directly on the following work:
+
+1. F. K. Isundwa, A. Marino, A. Berardi, I. Bovolo, P. Hunter, C. Neil, C. Silva Perez, and T. S. F. Silva, "Optimizing Change Detection Methods for Flood Mapping Using Polarimetric SAR," *IEEE J. Sel. Topics Appl. Earth Observ. Remote Sens.*, 2025, doi: [10.1109/JSTARS.2025.3628450](https://doi.org/10.1109/JSTARS.2025.3628450) — [IEEE Xplore](https://ieeexplore.ieee.org/document/11224508). *The earlier study this paper extends.*
+
+2. A. Marino and M. Nannini, "Signal Models for Changes in Polarimetric SAR Data," *IEEE Trans. Geosci. Remote Sens.*, vol. 60, pp. 1–18, 2022, Art. no. 5212818, doi: [10.1109/TGRS.2021.3113182](https://doi.org/10.1109/TGRS.2021.3113182) — [IEEE Xplore](https://ieeexplore.ieee.org/document/9560715). *Signal models (OPDiff / OPRatio) generalized here.*
+
+3. A. Marino and I. Hajnsek, "A Change Detector Based on an Optimization With Polarimetric SAR Imagery," *IEEE Trans. Geosci. Remote Sens.*, vol. 52, no. 8, pp. 4781–4798, Aug. 2014, doi: [10.1109/TGRS.2013.2284510](https://doi.org/10.1109/TGRS.2013.2284510) — [IEEE Xplore](https://ieeexplore.ieee.org/document/8438090). *The original polarimetric optimization change detector.*
 
 ## License
 
