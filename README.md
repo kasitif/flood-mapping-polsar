@@ -31,7 +31,7 @@ Quantifying flood inundation beneath vegetation is critical for understanding fl
 *Figure 1. Map of the study area with reference to the Satellite data footprint.*
 
 ### Scattering mechanisms
-![Scattering mechanisms before and after flood](images/scattering_mechanisms.png)
+![Scattering mechanisms before and after flood](images/scattering_mechanisms.jpg)
 *Figure 2. Three scattering mechanisms: rough surface scattering, specular reflection, and double bounce scattering in short vegetation and bare ground before and after floods.*
 
 ### SAR backscatter visualization
