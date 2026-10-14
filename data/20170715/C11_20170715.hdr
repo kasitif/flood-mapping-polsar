@@ -1,0 +1,15 @@
+ENVI
+description = {Sentinel-1 IW Level-1 SLC Product - Unit: intensity}
+samples = 6704
+lines = 2734
+bands = 1
+header offset = 0
+file type = ENVI Standard
+data type = 4
+interleave = bsq
+byte order = 1
+band names = { C11_slv1_15Jul2017 }
+map info = {Geographic Lat/Lon,3353.5,1368.5,-59.385284021539135,3.8405307342347035,1.2621329741879282E-4,1.2621329741879282E-4,WGS84,units=Degrees}
+coordinate system string = {GEOGCS["WGS84(DD)", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]], PRIMEM["Greenwich", 0.0], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH]]}
+data gain values = {1.0}
+data offset values = {0.0}

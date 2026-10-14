@@ -54,20 +54,24 @@ The analysis combines polarimetric SAR theory with optimization frameworks to de
 4. **Validation**: Accuracy assessment using optical data (PlanetScope) and ROC/AUC metrics
 5. **Classification**: Separation of open-water floods, grassland floods, and non-flooded areas
 
-## Jupyter Notebook
+## Jupyter Notebooks
 
-The step-by-step analysis with reproducible code is in the notebook:
+The step-by-step analysis is split into two notebooks:
 
-**[`notebooks/flood_detection_analysis.ipynb`](notebooks/flood_detection_analysis.ipynb)**
+**1. [`notebooks/01_change_detection.ipynb`](notebooks/01_change_detection.ipynb)** — change detection
+- Reading SNAP-exported ENVI covariance elements (`.hdr`/`.img`)
+- Boxcar speckle filtering
+- Computing the full detector bank (OPDiff, OPRatio, Model 1/3/4, Wishart, ...)
+- Plotting every detector result (before thresholding), controlled by a dictionary
 
-It covers:
-- Loading and preprocessing Sentinel-1 SLC data
-- Generating covariance matrices (VV, VH polarizations)
-- Implementing polarimetric change detection models
-- Testing detector combinations (monomial, linear, mixed)
-- Optimization of detector parameters
-- Accuracy assessment and visualization
-- Classification of open-water vs grassland flooding
+**2. [`notebooks/02_accuracy_assessment.ipynb`](notebooks/02_accuracy_assessment.ipynb)** — accuracy assessment
+- Loads the saved detector outputs (`results/<name>_<date>.npy`)
+- Thresholding and ROC/AUC assessment against reference masks
+- Per-cover-class metrics (Grassland / open-water / combined) + AUC summary table
+
+The same code is also available as standalone scripts:
+[`change_detection.py`](change_detection.py) and
+[`accuracy_assessment.py`](accuracy_assessment.py).
 
 ## Installation
 

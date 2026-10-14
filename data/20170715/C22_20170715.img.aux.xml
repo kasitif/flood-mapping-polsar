@@ -1,0 +1,34 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="Band_1">C22_slv3_15Jul2017</MDI>
+  </Metadata>
+  <Metadata domain="ENVI">
+    <MDI key="description">{Sentinel-1 IW Level-1 SLC Product - Unit: intensity}</MDI>
+    <MDI key="samples">6704</MDI>
+    <MDI key="lines">2734</MDI>
+    <MDI key="bands">1</MDI>
+    <MDI key="header_offset">0</MDI>
+    <MDI key="file_type">ENVI Standard</MDI>
+    <MDI key="data_type">4</MDI>
+    <MDI key="interleave">bsq</MDI>
+    <MDI key="byte_order">1</MDI>
+    <MDI key="band_names">{ C22_slv3_15Jul2017 }</MDI>
+    <MDI key="coordinate_system_string">{GEOGCS["WGS84(DD)", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]], PRIMEM["Greenwich", 0.0], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH]]}</MDI>
+    <MDI key="data_gain_values">{1.0}</MDI>
+    <MDI key="data_offset_values">{0.0}</MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">BAND</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>C22_slv3_15Jul2017</Description>
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_MAXIMUM">0.97353035211563</MDI>
+      <MDI key="STATISTICS_MEAN">0.032761530125058</MDI>
+      <MDI key="STATISTICS_STDDEV">0.027731493116806</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
