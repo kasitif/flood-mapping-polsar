@@ -1,9 +1,7 @@
 numpy
 scipy
+pandas
 matplotlib
-rasterio
-geopandas
-spectral
+scikit-learn
 tqdm
 jupyter
-notebook

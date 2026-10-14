@@ -40,7 +40,7 @@ Quantifying flood inundation beneath vegetation is critical for understanding fl
 
 ### Detector optimization and results
 ![Spatial representation of detector combinations](images/detector_results.png)
-*Figure 4. Spatial representation of combination of Rat1 and DifH detector outputs showing flood/no-flood classification.*
+*Figure 4. Spatial representation of combination of Rat1 and Dif1 detector outputs showing flood/no-flood classification.*
 
 > Note: Figures are reproduced from the paper. Check the IEEE copyright terms before publishing them publicly, or recreate them from your own code and data.
 
@@ -79,8 +79,24 @@ The same code is also available as standalone scripts:
 git clone https://github.com/[your-username]/flood-mapping-sar.git
 cd flood-mapping-sar
 pip install -r requirements.txt
-jupyter notebook notebooks/flood_detection_analysis.ipynb
+jupyter notebook notebooks/01_change_detection.ipynb
 ```
+
+Dependencies: `numpy`, `scipy`, `pandas`, `matplotlib`, `scikit-learn`, `tqdm`,
+`jupyter`. SAR data is read directly from the ENVI `.hdr`/`.img` pair with a
+small built-in reader, so no `spectral`/GDAL dependency is required.
+
+> **Environment note:** the detectors use single-matrix LAPACK calls per pixel.
+> Some BLAS builds crash on *batched* `np.linalg`, so the code intentionally
+> avoids it. If you hit a native crash, use a plain NumPy/SciPy environment with
+> a working LAPACK.
+
+## Workflow
+
+1. **`01_change_detection.ipynb`** — compute the detectors for an image pair and
+   save them to `results/<name>_<date>.npy`.
+2. **`02_accuracy_assessment.ipynb`** — load those `.npy` files, compare against
+   the reference masks, and produce ROC/AUC + best-operating-point tables.
 
 ## Repository Structure
 
@@ -89,14 +105,14 @@ jupyter notebook notebooks/flood_detection_analysis.ipynb
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-├── images/                        # figures from the paper
-│   ├── study_area.png
-│   ├── scattering_mechanisms.png
-│   ├── sar_backscatter.png
-│   └── detector_results.png
+├── change_detection.py            # detector bank + ENVI I/O (script form)
+├── accuracy_assessment.py         # ROC/AUC + best-parameter selection (script form)
 ├── notebooks/
-│   └── flood_detection_analysis.ipynb
-└── data/                          # sample SAR data or download instructions
+│   ├── 01_change_detection.ipynb
+│   └── 02_accuracy_assessment.ipynb
+├── data/                          # ENVI covariance stacks + reference masks
+├── results/                       # detector outputs (.npy), written by notebook 1
+└── images/                        # figures for the README
 ```
 
 ## Citation
