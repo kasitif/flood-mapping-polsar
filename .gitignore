@@ -71,3 +71,5 @@ run_log.txt
 # *.nc
 # *.h5
 notebooks/01_change_detection_example2.ipynb
+notebooks/01_change_detection_example2.ipynb
+notebooks/02_accuracy_assessment.ipynb
