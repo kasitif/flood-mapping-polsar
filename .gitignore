@@ -70,3 +70,4 @@ run_log.txt
 # *.tiff
 # *.nc
 # *.h5
+notebooks/01_change_detection_example2.ipynb
