@@ -73,3 +73,5 @@ run_log.txt
 notebooks/01_change_detection_example2.ipynb
 notebooks/01_change_detection_example2.ipynb
 notebooks/02_accuracy_assessment.ipynb
+accuracy_assessment.py
+change_detection.py
